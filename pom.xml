@@ -19,7 +19,6 @@
     </properties>
 
     <dependencies>
-        <!-- API de Servlet (Jakarta EE 10 / Servlet 6.0) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -31,7 +30,6 @@
     <build>
         <finalName>cadastro-cliente</finalName>
         <plugins>
-            <!-- Plugin do Jetty para rodar a aplicacao sem instalacao externa -->
             <plugin>
                 <groupId>org.eclipse.jetty.ee10</groupId>
                 <artifactId>jetty-ee10-maven-plugin</artifactId>
