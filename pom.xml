@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.exemplo</groupId>
+    <artifactId>cadastro-cliente</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging>
+
+    <name>Cadastro de Clientes - Servlet</name>
+    <description>App Java Web: formulario HTML -> Servlet -> resposta HTTP</description>
+
+    <properties>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- API de Servlet (Jakarta EE 10 / Servlet 6.0) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>cadastro-cliente</finalName>
+        <plugins>
+            <!-- Plugin do Jetty para rodar a aplicacao sem instalacao externa -->
+            <plugin>
+                <groupId>org.eclipse.jetty.ee10</groupId>
+                <artifactId>jetty-ee10-maven-plugin</artifactId>
+                <version>12.0.15</version>
+                <configuration>
+                    <httpPort>8080</httpPort>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
